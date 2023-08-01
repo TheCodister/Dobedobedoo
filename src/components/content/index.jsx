@@ -14,20 +14,22 @@ const Content = () => {
         else setMaxId(1);
     }
     const handleAdd = (text) => {
-        setMaxId((prevMaxId) => prevMaxId + 1);
-        setPlan((prevPlan) => {
+        if(text !== ''){
+            setMaxId((prevMaxId) => prevMaxId + 1);
+            setPlan((prevPlan) => {
             return[
                 ...prevPlan,
                 {content: text, id: maxId},
             ];
-        })
+            })
+        }
         setText('');
     }
     return ( 
         <div className="content">
             <div className="content-inputbox">
                     <input value = {text} onChange={(e) => setText(e.target.value)} onKeyDown={e => e.key === 'Enter' ? handleAdd(text):''} className='content-input' placeholder="What do you want to do"></input>
-                    <button onClick={() => handleAdd(text)} className='content-button'>Add</button>
+                    <h1 onClick={() => handleAdd(text)} className='content-button'>Add New Task</h1>
             </div>
             <div className='content-todolist'>
                 <h1>Your list</h1>

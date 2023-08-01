@@ -32,14 +32,19 @@
     outline: none;
 }
 .content-button{
-    border-style: none;
-    border-radius: 20em;
-    width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10em;
+    width: 12em;
     height: 3em;
     cursor: pointer;
-    font-weight: bolder;
     font-size: 1rem;
     background-color:#fabdbd;
+}
+.content-button:hover{
+    background-color: #00d4ff;
+    transition: 200ms ease-in-out;
 }
 .content-todolist{
     display: flex;
@@ -73,6 +78,10 @@
     background-color: #fabdbd;
     border-radius: 1em;
     cursor: pointer;
+}
+.content-todolist-item h2:hover{
+    background-color: #fff;
+    transition: 200ms ease-in-out;
 }
 .content-todolist-item h1{
     margin-right: 2em;
