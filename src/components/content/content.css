@@ -24,12 +24,14 @@
   border-bottom: solid 0.15em #a5a5a5;
   margin-bottom: 1em;
   font-size: 1.2rem;
+  transition: 500ms;
 }
 .content-input::placeholder {
   color: #cccccc;
 }
-.content-input:invalid {
-  border-color: #ff0000;
+.content-input:focus {
+  transition: 500ms;
+  font-size: 1.4rem;
 }
 .content-input:focus {
   outline: none;
@@ -99,6 +101,7 @@
   margin-right: 2em;
 }
 .content-todolist-item p {
+  font-weight: lighter;
   font-size: 1.5rem;
 }
 @keyframes fadeIn {
@@ -106,6 +109,14 @@
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+  0% {
     opacity: 1;
   }
 }
